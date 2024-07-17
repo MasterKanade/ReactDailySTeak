@@ -1,12 +1,28 @@
-// Created a h1 tag in the react and have 3 parameters:
-// 1. tagName 2. object consiste attribute for the tag 3. content for the respective tag.
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Hello From React!"
+/* 
+How to insert nested HTML tag into React.
+<div id="parent">
+<div id="child">
+<h1></h1>
+</div>
+</div>
+*/
+
+const parent = React.createElement(
+  "div",
+  { id: "Parent" },
+  React.createElement(
+    "div",
+    { id: "child" },
+    React.createElement(
+      "h1",
+      {},
+      "Hi I'm grandchildren of Parent and children of child"
+    )
+  )
 );
-// Created a root where all the react code will be run
-// Root is the top most element in the React hierarchy.
+
+console.log(parent);
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// injected heading element into the react by using render method
-root.render(heading);
+
+root.render(parent);
