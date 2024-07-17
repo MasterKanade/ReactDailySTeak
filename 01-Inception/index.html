@@ -7,7 +7,14 @@
   </head>
   <body>
     <div id="root">
-      <h1>Hello World!</h1>
+      <script>
+        // we have created h1 element with it's text
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello World from Javascript!!!";
+        // we injected our h1 tag into the root element
+        const root = document.getElementById("root");
+        root.appendChild(heading);
+      </script>
     </div>
   </body>
 </html>
