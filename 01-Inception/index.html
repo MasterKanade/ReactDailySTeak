@@ -7,8 +7,20 @@
     <title>First Web Page</title>
   </head>
   <body>
-    <div id="root"></div>
-
+    <!-- React will not consider the other elements out of the root
+         The below h1 tag will appear on the page. 
+    -->
+    <h1>Before Root</h1>
+    <div id="root">
+      <!-- This is will be replaced by render method while rendering the root
+       it will not appear on the page.  -->
+      <h1>How are you?</h1>
+    </div>
+    <h1>After Root</h1>
+    <!-- The above h1 tag will appear on the webpage
+     React only considers the code in between root.
+     Therefore, it's a library and not the Framework. 
+    -->
     <!-- This file is core of React libaray it has all algorithm -->
     <script
       crossorigin
