@@ -6,15 +6,30 @@
     <title>First Web Page</title>
   </head>
   <body>
-    <div id="root">
-      <script>
-        // we have created h1 element with it's text
-        const heading = document.createElement("h1");
-        heading.innerHTML = "Hello World from Javascript!!!";
-        // we injected our h1 tag into the root element
-        const root = document.getElementById("root");
-        root.appendChild(heading);
-      </script>
-    </div>
+    <div id="root"></div>
+
+    <!-- This file is core of React libaray it has all algorithm -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- This file is all about DOM which interact/manipulates the DOM -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- why above 2 files are separate files? because react not only works in the
+         browser it also works in the Mobile (React Native) -->
+
+    <script>
+      // Created a h1 tag in the react and have 3 parameters:
+      // 1. tagName 2. object 3. content for the respective tag.
+      const heading = React.createElement("h1", {}, "Hello From React!");
+      // Created a root where all the react code will be run
+      // Root is the top most element in the React hierarchy.
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+      // injected heading element into the react by using render method
+      root.render(heading);
+    </script>
   </body>
 </html>
