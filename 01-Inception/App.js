@@ -1,18 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// React Element
-const heading = (
-  <h1 className="heading" tabIndex={5}>
-    Hello this is valid react element
-  </h1>
-);
+// Title of the web page
+const Title = () => {
+  return <h1 id="title">Jack Sparrow 🚩🏴‍☠️🚩</h1>;
+};
 
-// React Componenet
+// The Component Composition
+// Using another componenet inside the component is called Component Composition
 const HeadingComponent = () => {
   return (
-    <div className="container">
-      <h1 id="heading">This is perfect react element or JSX element</h1>
+    <div id="container">
+      <Title />
+      <h1 id="heading">Jack Sparrow Entered Into The House 🚤⛵🛥🛳🚢</h1>
     </div>
   );
 };
