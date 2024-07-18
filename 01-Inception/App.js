@@ -1,21 +1,5 @@
-/* 
-How to insert nested HTML tag into React.
-<html>
-<body>
-<div id="parent">
-<div id="child1">
-<h1>Hi this is from h1 tag child1</h1>
-<h2>Hi this is from h1 tag child2</h2>
-</div>
-<div id="child1">
-<h1>Hi this is from h1 tag child1</h1>
-<h2>Hi this is from h1 tag child2</h2>
-</div>
-</div>
-</body>
-</html>
-
-*/
+import React from "react";
+import ReactDOM from "react-dom/client";
 
 const parent = React.createElement("div", { id: "Parent" }, [
   React.createElement("div", { id: "child" }, [

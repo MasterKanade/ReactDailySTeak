@@ -7,33 +7,11 @@
     <title>First Web Page</title>
   </head>
   <body>
-    <!-- React will not consider the other elements out of the root
-         The below h1 tag will appear on the page. 
-    -->
-    <h1>Before Root</h1>
     <div id="root">
-      <!-- This is will be replaced by render method while rendering the root
-       it will not appear on the page.  -->
-      <h1>How are you?</h1>
+      <h1>Mayur Here</h1>
     </div>
-    <h1>After Root</h1>
-    <!-- The above h1 tag will appear on the webpage
-     React only considers the code in between root.
-     Therefore, it's a library and not the Framework. 
-    -->
-    <!-- This file is core of React libaray it has all algorithm -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react@18/umd/react.development.js"
-    ></script>
-    <!-- This file is all about DOM which interact/manipulates the DOM -->
-    <script
-      crossorigin
-      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
-    <!-- why above 2 files are separate files? because react not only works in the
-         browser it also works in the Mobile (React Native) -->
+    <!-- now we no longer needed CDN because we've added react and react-dom dependencies -->
 
-    <script src="./App.js"></script>
+    <script type="module" src="./App.js"></script>
   </body>
 </html>
