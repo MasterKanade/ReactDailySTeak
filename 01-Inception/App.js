@@ -8,6 +8,7 @@ const heading = (
   </h1>
 );
 
+// React Componenet
 const HeadingComponent = () => {
   return (
     <div className="container">
@@ -15,3 +16,7 @@ const HeadingComponent = () => {
     </div>
   );
 };
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<HeadingComponent />);
