@@ -1,17 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "div",
-  { id: "heading" },
-  "Children Area in React Heading!"
+// React Element
+const heading = (
+  <h1 className="heading" tabIndex={5}>
+    Hello this is valid react element
+  </h1>
 );
 
-const jsxHeading = <h1 id="heading">JSX is clean clode 🚀🚀🚁</h1>;
-
-console.log(heading);
-console.log(jsxHeading);
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-
-root.render(jsxHeading);
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+      <h1 id="heading">This is perfect react element or JSX element</h1>
+    </div>
+  );
+};
