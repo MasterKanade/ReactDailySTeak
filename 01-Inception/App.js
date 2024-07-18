@@ -1,18 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-// Title of the web page
-const Title = () => {
-  return <h1 id="title">Jack Sparrow 🚩🏴‍☠️🚩</h1>;
-};
+const title = <>The Title</>;
 
-// The Component Composition
-// Using another componenet inside the component is called Component Composition
 const HeadingComponent = () => {
+  const number = 25000000;
   return (
     <div id="container">
-      <Title />
-      <h1 id="heading">Jack Sparrow Entered Into The House 🚤⛵🛥🛳🚢</h1>
+      <h1>
+        <span id="title">Rendered: {title}</span>
+      </h1>
+      <h2 id="heading">
+        The best example of injecting React element OR JSX element into the
+        componenet
+      </h2>
+      <h3 id="heading">
+        you can put any javascript expression inside the curly braces in jsx:
+        direct expressions like 200 + 300 : {200 + 300}
+        <p>
+          The variable declared inside the function as a number valued: {number}
+        </p>
+      </h3>
     </div>
   );
 };
