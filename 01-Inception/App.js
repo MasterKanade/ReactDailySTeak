@@ -42,6 +42,7 @@ const Header = () => {
 };
 
 const RestaurentCard = ({ resData }) => {
+  // Array Data Destructuring.
   const { cloudinaryImageId, name, cuisines, costForTwo, avgRating } =
     resData?.info;
   const { deliveryTime } = resData.info?.sla;
@@ -56,6 +57,7 @@ const RestaurentCard = ({ resData }) => {
         }
       />
       <h3>{name}</h3>
+      {/* Data separated for cusines using join() array method */}
       <h4>Cusine: {cuisines.join(", ")}</h4>
       <h4>Ratings: {avgRating}</h4>
       <h4>Price: {costForTwo}</h4>
